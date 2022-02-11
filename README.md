@@ -33,16 +33,6 @@ This script should work on Unix systems with GNU Core Utilities and [GNU bc](htt
 
 ### Details
 
-This script is a wrapper for the `PWM()` and `matchPWM()` functions from the `Biostrings` package. (see [RDocumentation](https://www.rdocumentation.org/packages/Biostrings/versions/2.40.2/topics/matchPWM))
 
-`PWM()` is used to convert the input position-frequency matrix into a position-weight matrix using `type = "log2probratio"`. The parameters of the Dirichlet conjugate prior are adjusted to account for the GC content of the input fasta. To save time, the number of `matchPWM()` calls are reduced to one per motif by first concatenating the input fasta into a single sequence with contigs demarcated by non-IUPAC characters. 
-
-There are three parameters that affect the runtime of the script.
-
-1. The length of the input fasta
-2. The number of motifs represented in the position-frequency table
-3. The [information content](https://en.wikipedia.org/wiki/Position_weight_matrix#Information_content) of each motif. Motifs with lower information content will have lower maximum scores, and therefore more matches above the cutoff threshold.
-
-Future implementations should further increase speed by parallelizing `matchPWM()` calls. 
 
 
