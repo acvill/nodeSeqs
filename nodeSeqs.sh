@@ -1,12 +1,7 @@
 #!/bin/bash
 
+# https://github.com/acvill/nodeSeqs
 # https://bioinformatics.stackexchange.com/questions/18476
-
-# This is a script to annotate sequences proximal to high-degree nodes in assembly graphs
-## First, the GFA1 file (from metaSPAdes) is parsed to identify segments with degree >= d
-## Then, links associated with high-degree nodes are pulled, and duplicate sequences are removed
-## Finally, DIAMOND aligns sequences to DNA reference database
-## The results can then be compared to HUMAnN3 output to see which genes are enriched at nodes in the assembly graph
 
 # defaults
 outdir=$(pwd)
