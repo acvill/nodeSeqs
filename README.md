@@ -50,7 +50,7 @@ Download [`nodeSeqs.sh`](https://github.com/acvill/nodeSeqs/blob/main/nodeSeqs.s
     gunzip assembly_graph_with_scaffolds.gfa.gz
     ./nodeSeqs.sh -g assembly_graph_with_scaffolds.gfa -d 5
     
-Progress will print to the command line. Once finished, `segments.fasta` is written to the working directory. 
+Progress will print to the command line. Once finished, `segments.fasta` is written to the working directory. Use checksums to compare your output to the [example output](https://github.com/acvill/nodeSeqs/blob/main/segments.fasta).
 
 ## Details
 
