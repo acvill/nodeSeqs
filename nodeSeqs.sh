@@ -57,6 +57,11 @@ else
   printf "######################\n\n"
 fi
 
+if [[ ! -d ${outdir} ]]; then
+  printf "creating ${outdir}\n" >> ${log}
+  mkdir -p ${outdir}
+fi
+
 # make tmp directory and initialize log file
 tmp_dir=$(mktemp -d -t temp_XXXXX -p ${outdir})
 log=${tmp_dir}/log.txt
@@ -142,12 +147,12 @@ while read segment; do
   fi
 
   ((line+=1))
-  draw_progress_bar $line $totsegs "segments"
+  draw_progress_bar ${line} ${totsegs} "segments"
 
 done < ${tmp_dir}/segments.txt
 
 if [[ ${keeptemp} -ne 1 ]]; then
-  rm -rf $tmp_dir
+  rm -rf ${tmp_dir}
 fi
 
 printf "\nDone!\n"
