@@ -1,7 +1,7 @@
 # nodeSeqs
 `nodeSeqs.sh` is a command-line script for extracting sequences from high-degree nodes within assembly graphs, using a [GFA file](http://gfa-spec.github.io/GFA-spec/GFA1.html) as input. In the language of GFA, this script looks for *segments* that have a large number of *links*. The creation of this script was motivated by [my question on Bioinformatics Stack Exchange](https://bioinformatics.stackexchange.com/questions/18476), and my approach to address this problem is modeled on [an answer by Maximilian Press](https://bioinformatics.stackexchange.com/a/18528/3967). 
 
-For a use case, see my [blog post](https://albertvill.com/posts/nodeseqs_oral/).
+For a use case, see my blog post: [*Lost at the crossroads: genes at the nodes of short-read assembly graphs*](https://albertvill.com/posts/nodeseqs_oral/)
 
 ## Inputs
 
